@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Tic Tac Toe</h1>
+        
+        <div class="board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        
+        <br>
+        <a href="{{ url_for('home') }}" class="btn">Back to To-Do List</a>
+    </div>
+
+    <div id="result-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <h2 id="modal-message">Game Over</h2>
+            <button id="restart-btn" class="btn">Play Again</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='css/tictactoe.js') }}"></script>
+</body>
+</html>
